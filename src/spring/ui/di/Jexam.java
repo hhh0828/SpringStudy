@@ -1,8 +1,14 @@
 package spring.ui.di;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("zdz")
 public class Jexam implements Exam {
 
+	@Value("30")
 	private int JA;
+	@Value("30")
 	private int JB;
 	private int JC;
 	private int JAA;

@@ -1,8 +1,13 @@
 package spring.ui.di;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("zz")
 public class Hexam implements Exam {
-	
+	@Value("20")
 	private int Hscore;
+	@Value("40")
 	private int H2score;
 	
 	public Hexam() {

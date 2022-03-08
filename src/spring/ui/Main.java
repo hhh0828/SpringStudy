@@ -30,6 +30,7 @@ public class Main {
 		//ioc컨테이너임		
 		
 			//Average average = (Average) context.getBean("average");
+			//average
 			MathH total = context.getBean(Total.class);
 			MathH aver = context.getBean(Average.class);
 			

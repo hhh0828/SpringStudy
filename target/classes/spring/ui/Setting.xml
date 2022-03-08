@@ -2,15 +2,21 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
-	<bean id="hexam" class="spring.ui.di.Hexam">
-<!-- 		<property name="Hscore" value="50" />
-		<property name="H2score" value="60" /> -->
+	
+	<context:component-scan base-package="spring.ui.*"></context:component-scan>
+	<!-- 모든컴포넌트를 다확인하세요! 패키지 전역확인 -->
+	
+<!-- 	<bean id="hexam" class="spring.ui.di.Hexam">
+		<property name="Hscore" value="50" />
+		<property name="H2score" value="60" />
 		<constructor-arg index="0" value="10" />
 		<constructor-arg index="1" value="10" />
 	</bean>
-	<!--객체의 생성 부분 Hexam class를 참조하여 hexam 으로 만든다.-->
+	객체의 생성 부분 Hexam class를 참조하여 hexam 으로 만든다.
 	<bean id="jexam" class="spring.ui.di.Jexam" >
 		<constructor-arg index="0" value="10" />
 		<constructor-arg index="1" value="10" />
@@ -19,17 +25,17 @@
 		<constructor-arg index="4" value="10" />
 		<constructor-arg index="5" value="10" />
 	
-	</bean>
+	</bean> -->
 	
 	<!--객체의 생성 부분 Jexam class를 참조하여 jexam 으로 만든다.-->
 	
-	<bean id="total" class="spring.ui.di.mi.Total">
+	<!-- <bean id="total" class="spring.ui.di.mi.Total">
 		<property name="exam" ref="jexam"></property>
 	</bean>
 	<bean id="average" class="spring.ui.di.mi.Average">
 		<property name="exam" ref="hexam"></property>
 	
-	</bean>
+	</bean> -->
 	
 	
 	<!-- 객체 생성과 결합! 
